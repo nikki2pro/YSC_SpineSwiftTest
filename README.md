@@ -55,6 +55,13 @@ USAGE
   + atlas created in Spine will not work. Atlas folder with all image files only.
   + atlas folder name should be like "something.atlas".
   + atlas folder should include all image files(image files used in Spine).
+- IMPORTANT: In order to enable ikAction and Rotation inheritance option, put ikActionUpdate() in didFinishUpdate() of the scene(GameScene class or SKScene class)
+~~~
+    override func didFinishUpdate() {
+        hero.ikActionUpdate()
+    }
+}
+~~~
 - Here's simple example: It's assuming your JSON file name is "hero.JSON" and your atlas folder name is "hero.atlas"
 ~~~
   let hero = YSC_Skeletion()
@@ -91,3 +98,5 @@ PROPERTY AND FUNCTIONS
 - findBone(boneName:String, inBonesArray:Array<YSC_SpineBone>) -> YSC_SpineBone?
   + It finds the bone instance with the given name and returns it.
   + You can use this function when you want to customize your bone. For example, giving it physicsbody.
+- ikActionUpdate()
+  + It should be in didFinishUpdate() in order to enable ikAction and rotation inheritance option.

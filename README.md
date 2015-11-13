@@ -49,7 +49,7 @@ WHAT YOU SHOULD KNOW:
 
 USAGE
 
-- Copy YSC_SpineSwiftSK folder to your project.
+- Copy YSC_SpineSwift folder to your project.
 - Copy SwiftyJSON.swift to your project(You can download it from https://github.com/SwiftyJSON/SwiftyJSON ).
 - Copy your JSON file and atlas folder to your project.
   + atlas created in Spine will not work. Atlas folder with all image files only.
@@ -100,3 +100,9 @@ PROPERTY AND FUNCTIONS
   + You can use this function when you want to customize your bone. For example, giving it physicsbody.
 - ikActionUpdate()
   + It should be in didFinishUpdate() in order to enable ikAction and rotation inheritance option.
+
+ABOUT THE SAMPLE PROGRAM
+- It animates hero and alien which I got from the samples in Spine software.
+- If you click hero or alien, they will do some action and return to default action.
+- hero action has IK action. You can find it work nicely.
+- alien "death" action includes slot animation, which was tricky. It work nicely too.

@@ -14,6 +14,16 @@
 		ECC251811BF5D8EC00DE456B /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC2517F1BF5D8EC00DE456B /* Main.storyboard */; };
 		ECC251831BF5D8EC00DE456B /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = ECC251821BF5D8EC00DE456B /* Assets.xcassets */; };
 		ECC251861BF5D8EC00DE456B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = ECC251841BF5D8EC00DE456B /* LaunchScreen.storyboard */; };
+		ECC251931BF5D90200DE456B /* YSC_SpineAttachment.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC2518E1BF5D90200DE456B /* YSC_SpineAttachment.swift */; };
+		ECC251941BF5D90200DE456B /* YSC_SpineBone.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC2518F1BF5D90200DE456B /* YSC_SpineBone.swift */; };
+		ECC251951BF5D90200DE456B /* YSC_SpineJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC251901BF5D90200DE456B /* YSC_SpineJSON.swift */; };
+		ECC251961BF5D90200DE456B /* YSC_SpineSkeleton.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC251911BF5D90200DE456B /* YSC_SpineSkeleton.swift */; };
+		ECC251971BF5D90200DE456B /* YSC_SpineSlot.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC251921BF5D90200DE456B /* YSC_SpineSlot.swift */; };
+		ECC251991BF5D91500DE456B /* SwiftyJSON.swift in Sources */ = {isa = PBXBuildFile; fileRef = ECC251981BF5D91500DE456B /* SwiftyJSON.swift */; };
+		ECC2519E1BF5D92800DE456B /* alien.atlas in Resources */ = {isa = PBXBuildFile; fileRef = ECC2519A1BF5D92800DE456B /* alien.atlas */; };
+		ECC2519F1BF5D92800DE456B /* alien.json in Resources */ = {isa = PBXBuildFile; fileRef = ECC2519B1BF5D92800DE456B /* alien.json */; };
+		ECC251A01BF5D92800DE456B /* hero.atlas in Resources */ = {isa = PBXBuildFile; fileRef = ECC2519C1BF5D92800DE456B /* hero.atlas */; };
+		ECC251A11BF5D92800DE456B /* hero.json in Resources */ = {isa = PBXBuildFile; fileRef = ECC2519D1BF5D92800DE456B /* hero.json */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -26,6 +36,16 @@
 		ECC251821BF5D8EC00DE456B /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		ECC251851BF5D8EC00DE456B /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		ECC251871BF5D8EC00DE456B /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		ECC2518E1BF5D90200DE456B /* YSC_SpineAttachment.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSC_SpineAttachment.swift; sourceTree = "<group>"; };
+		ECC2518F1BF5D90200DE456B /* YSC_SpineBone.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSC_SpineBone.swift; sourceTree = "<group>"; };
+		ECC251901BF5D90200DE456B /* YSC_SpineJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSC_SpineJSON.swift; sourceTree = "<group>"; };
+		ECC251911BF5D90200DE456B /* YSC_SpineSkeleton.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSC_SpineSkeleton.swift; sourceTree = "<group>"; };
+		ECC251921BF5D90200DE456B /* YSC_SpineSlot.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = YSC_SpineSlot.swift; sourceTree = "<group>"; };
+		ECC251981BF5D91500DE456B /* SwiftyJSON.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwiftyJSON.swift; sourceTree = "<group>"; };
+		ECC2519A1BF5D92800DE456B /* alien.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = alien.atlas; sourceTree = "<group>"; };
+		ECC2519B1BF5D92800DE456B /* alien.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = alien.json; sourceTree = "<group>"; };
+		ECC2519C1BF5D92800DE456B /* hero.atlas */ = {isa = PBXFileReference; lastKnownFileType = folder.skatlas; path = hero.atlas; sourceTree = "<group>"; };
+		ECC2519D1BF5D92800DE456B /* hero.json */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.json; path = hero.json; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -42,6 +62,12 @@
 		ECC2516B1BF5D8EC00DE456B = {
 			isa = PBXGroup;
 			children = (
+				ECC2518D1BF5D90200DE456B /* YSC_SpineSwift */,
+				ECC251981BF5D91500DE456B /* SwiftyJSON.swift */,
+				ECC2519A1BF5D92800DE456B /* alien.atlas */,
+				ECC2519B1BF5D92800DE456B /* alien.json */,
+				ECC2519C1BF5D92800DE456B /* hero.atlas */,
+				ECC2519D1BF5D92800DE456B /* hero.json */,
 				ECC251761BF5D8EC00DE456B /* YSC_SpineSwiftTest */,
 				ECC251751BF5D8EC00DE456B /* Products */,
 			);
@@ -68,6 +94,18 @@
 				ECC251871BF5D8EC00DE456B /* Info.plist */,
 			);
 			path = YSC_SpineSwiftTest;
+			sourceTree = "<group>";
+		};
+		ECC2518D1BF5D90200DE456B /* YSC_SpineSwift */ = {
+			isa = PBXGroup;
+			children = (
+				ECC2518E1BF5D90200DE456B /* YSC_SpineAttachment.swift */,
+				ECC2518F1BF5D90200DE456B /* YSC_SpineBone.swift */,
+				ECC251901BF5D90200DE456B /* YSC_SpineJSON.swift */,
+				ECC251911BF5D90200DE456B /* YSC_SpineSkeleton.swift */,
+				ECC251921BF5D90200DE456B /* YSC_SpineSlot.swift */,
+			);
+			path = YSC_SpineSwift;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -129,9 +167,13 @@
 			buildActionMask = 2147483647;
 			files = (
 				ECC2517A1BF5D8EC00DE456B /* GameScene.sks in Resources */,
+				ECC2519F1BF5D92800DE456B /* alien.json in Resources */,
 				ECC251861BF5D8EC00DE456B /* LaunchScreen.storyboard in Resources */,
 				ECC251831BF5D8EC00DE456B /* Assets.xcassets in Resources */,
 				ECC251811BF5D8EC00DE456B /* Main.storyboard in Resources */,
+				ECC2519E1BF5D92800DE456B /* alien.atlas in Resources */,
+				ECC251A01BF5D92800DE456B /* hero.atlas in Resources */,
+				ECC251A11BF5D92800DE456B /* hero.json in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -142,9 +184,15 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				ECC251941BF5D90200DE456B /* YSC_SpineBone.swift in Sources */,
 				ECC2517C1BF5D8EC00DE456B /* GameScene.swift in Sources */,
+				ECC251961BF5D90200DE456B /* YSC_SpineSkeleton.swift in Sources */,
 				ECC2517E1BF5D8EC00DE456B /* GameViewController.swift in Sources */,
+				ECC251931BF5D90200DE456B /* YSC_SpineAttachment.swift in Sources */,
+				ECC251971BF5D90200DE456B /* YSC_SpineSlot.swift in Sources */,
+				ECC251991BF5D91500DE456B /* SwiftyJSON.swift in Sources */,
 				ECC251781BF5D8EC00DE456B /* AppDelegate.swift in Sources */,
+				ECC251951BF5D90200DE456B /* YSC_SpineJSON.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

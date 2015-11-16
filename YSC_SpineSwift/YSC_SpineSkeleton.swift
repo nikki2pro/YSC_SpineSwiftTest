@@ -6,6 +6,19 @@
 //  Copyright © 2015년 Yoonsuk Choi. All rights reserved.
 //
 
+
+// Revision History
+// 2015/11/15 1.0 : First version
+// 2015/11/16 1.1 : YSC_SpineSkeleton.findAttachment() added
+//                  all action is keyed with its animation name
+//                  YSC_SpineSkeletion.isRunningAction(key:String) added
+
+
+
+
+
+
+
 import Foundation
 import SpriteKit
 
@@ -45,7 +58,7 @@ class YSC_SpineSkeleton: SKNode {
                 }
             }
             if self.privateQueuedAnimation == nil {
-                print("It's not a valid animation name. CHeck it please!!")
+                print("It's not a valid animation name. Check it please!!")
             }
         }
     }
@@ -70,9 +83,6 @@ class YSC_SpineSkeleton: SKNode {
         let bonesJSON = json["bones"]
         self.bones = self.createBones(bonesJSON: bonesJSON)
         
-        
-        
-        
         // create all slot instances, find their parent bone instances, and store them in self.slots as array
         let slotsJSON = json["slots"]
         self.slots = self.createSlots(slotsJSON: slotsJSON)
@@ -83,7 +93,6 @@ class YSC_SpineSkeleton: SKNode {
         }
         let skinJSON = json["skins"][currentSkinName]
         self.createSkin(skinJSON: skinJSON)
-        
         
         // create animations
         let animationsJSON = json["animations"]
@@ -371,8 +380,45 @@ class YSC_SpineSkeleton: SKNode {
         return nil
     }
     
-
+    func findAttachment(name:String) -> YSC_SpineAttachment? {
+        var attachment:YSC_SpineAttachment?
+        for aSlot in self.slots {
+            aSlot.enumerateChildNodesWithName(name, usingBlock: { (node:SKNode, stop:UnsafeMutablePointer<ObjCBool>) -> Void in
+                if let sprite = node as? YSC_SpineAttachment {
+                    attachment = sprite
+                }
+            })
+        }
+        return attachment
+    }
     
+    func isRunningAction(keyName:String) -> Bool {
+        
+        // This function is not working on runAnimationUsingQueue()
+        var decision:Bool = false
+        for aBone in self.bones {
+            if aBone.actionForKey(keyName) != nil {
+                decision = true
+            }
+        }
+        for aSlot in self.slots {
+            aSlot.enumerateChildNodesWithName("*", usingBlock: { (node:SKNode, stop:UnsafeMutablePointer<ObjCBool>) -> Void in
+                if let sprite = node as? YSC_SpineAttachment {
+                    if sprite.actionForKey(keyName) != nil {
+                        decision = true
+                    }
+                }
+            })
+        }
+        /*
+        if decision == true {
+            print("\(keyName) is running!")
+        } else {
+            print("\(keyName) is not running!")
+        }
+        */
+        return decision
+    }
 }
 
 

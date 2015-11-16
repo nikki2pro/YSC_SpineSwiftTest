@@ -110,10 +110,10 @@ class YSC_SpineSlot: SKNode {
                     }
                     if count <= -1 {
                         let actionForever = SKAction.repeatActionForever(SKAction.group(actionGroup))
-                        sprite.runAction(actionForever)
+                        sprite.runAction(actionForever, withKey: animationName)
                     } else {
                         let repeatedAction = SKAction.repeatAction(SKAction.group(actionGroup), count: count)
-                        sprite.runAction(repeatedAction)
+                        sprite.runAction(repeatedAction, withKey: animationName)
                     }
                 }
             }
@@ -137,7 +137,7 @@ class YSC_SpineSlot: SKNode {
                     }
                     if count <= -1 {
                         let actionForever = SKAction.repeatActionForever(SKAction.group(actionGroup))
-                        sprite.runAction(actionForever)
+                        sprite.runAction(actionForever, withKey: animationName)
                     } else {
                         let repeatedAction = SKAction.repeatAction(SKAction.group(actionGroup), count: count)
                         var queuedActionGroup = Array<SKAction>()
@@ -153,10 +153,10 @@ class YSC_SpineSlot: SKNode {
                                     SKAction.waitForDuration(interval),
                                     SKAction.repeatActionForever(SKAction.sequence(queuedActionGroup))
                                     ])
-                                sprite.runAction(actionSequence)
+                                sprite.runAction(actionSequence, withKey: animationName)
                             })
                         } else {
-                            sprite.runAction(SKAction.repeatAction(repeatedAction, count: count))
+                            sprite.runAction(SKAction.repeatAction(repeatedAction, count: count), withKey: animationName)
                         }
                     }
                 }

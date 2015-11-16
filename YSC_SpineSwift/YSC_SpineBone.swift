@@ -259,10 +259,10 @@ class YSC_SpineBone: SKSpriteNode {
         let SRTAction = self.SRTAction[animationName]!
         if count <= -1 {
             let actionForever = SKAction.repeatActionForever(SRTAction)
-            self.runAction(actionForever)
+            self.runAction(actionForever, withKey: animationName)
         } else {
             let repeatedAction = SKAction.repeatAction(SRTAction, count: count)
-            self.runAction(repeatedAction)
+            self.runAction(repeatedAction, withKey: animationName)
         }
     }
     
@@ -273,7 +273,7 @@ class YSC_SpineBone: SKSpriteNode {
         let repeatingAction = SKAction.repeatAction(SRTAction, count: count)
         if count <= -1 {
             let actionForever = SKAction.repeatActionForever(SRTAction)
-            self.runAction(actionForever)
+            self.runAction(actionForever, withKey: animationName)
         } else  {
             self.runAction(repeatingAction, completion: { () -> Void in
                 let actionSequence:Array<SKAction> = [
@@ -283,7 +283,7 @@ class YSC_SpineBone: SKSpriteNode {
                     SKAction.waitForDuration(interval),
                     SKAction.repeatActionForever(self.SRTAction[queuedAnimationName]!)
                     ]
-                self.runAction(SKAction.sequence(actionSequence))
+                self.runAction(SKAction.sequence(actionSequence), withKey: animationName)
             })
         }
     }

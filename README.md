@@ -16,6 +16,13 @@ LISCENCE ISSUE
 - The JSON files and atlas(alien.JSON, alien.atlas, hero.JSON, and hero.atlas) used here are the samples included in Spine software.
 - You can use and modify this runtime for personal or internal purpose. But not for your commecial use.
 
+REVISION HISTORY
+
+2015/11/?? First version
+2015/11/16  1. Added YSC_SpineSkeleton.findAttachment(name:String) - Use this function to find the attachment to be               customized. For example, you can add physics body to the attachment you find with this function.
+            2. All running action is keyed with its animation name.
+            3. Added YSC_SpineSkeleton.isRunningAction(key:String) - Use this function to check a certain animation               is being run.
+
 WHAT IT SUPPORTS:
 - Fully functional bone and slot animations (scale, rotate, translate, color, curve, and so on)
 - Support IK (Inverse Kinematics), which is available in Spine Pro version
@@ -100,6 +107,10 @@ PROPERTY AND FUNCTIONS
   + You can use this function when you want to customize your bone. For example, giving it physicsbody.
 - ikActionUpdate()
   + It should be in didFinishUpdate() in order to enable ikAction and rotation inheritance option.
+- findAttachment(name:String) -> YSC_SpineAttachment
+  + find the specific attachment and return its instance.
+- isRunningAnimation(key:String) -> Bool
+  + if specific animation is being run, return true. if not, false.
 
 ABOUT THE SAMPLE PROGRAM
 - It animates hero and alien which I got from the samples in Spine software.

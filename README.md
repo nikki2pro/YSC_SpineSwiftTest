@@ -18,7 +18,8 @@ LISCENCE ISSUE
 
 REVISION HISTORY
 
-2015/11/?? First version
+2015/11/?? First version.
+
 2015/11/16  1. Added YSC_SpineSkeleton.findAttachment(name:String) - Use this function to find the attachment to be               customized. For example, you can add physics body to the attachment you find with this function.
             2. All running action is keyed with its animation name.
             3. Added YSC_SpineSkeleton.isRunningAction(key:String) - Use this function to check a certain animation               is being run.

@@ -111,7 +111,7 @@ PROPERTY AND FUNCTIONS
   + It should be in didFinishUpdate() in order to enable ikAction and rotation inheritance option.
 - findAttachment(name:String) -> YSC_SpineAttachment
   + find the specific attachment and return its instance.
-- isRunningAnimation(key:String) -> Bool
+- isRunningAction(key:String) -> Bool
   + if specific animation is being run, return true. if not, false.
   + Warning: this function is not working with the animation run by runningAnimationUsingQueue.
 

@@ -23,7 +23,7 @@ REVISION HISTORY
 2015/11/16.
 - Added YSC_SpineSkeleton.findAttachment(name:String) - Use this function to find the attachment to be               customized. For example, you can add physics body to the attachment you find with this function.
 - All running action is keyed with its animation name.
-- Added YSC_SpineSkeleton.isRunningAction(key:String) - Use this function to check a certain animation               is being run.
+- Added YSC_SpineSkeleton.isRunningAction(key:String) - Use this function to check a certain animation               is being run. (Warning: this function is not working with the animation run by runningAnimationUsingQueue.)
 
 WHAT IT SUPPORTS:
 - Fully functional bone and slot animations (scale, rotate, translate, color, curve, and so on)
@@ -113,6 +113,7 @@ PROPERTY AND FUNCTIONS
   + find the specific attachment and return its instance.
 - isRunningAnimation(key:String) -> Bool
   + if specific animation is being run, return true. if not, false.
+  + Warning: this function is not working with the animation run by runningAnimationUsingQueue.
 
 ABOUT THE SAMPLE PROGRAM
 - It animates hero and alien which I got from the samples in Spine software.

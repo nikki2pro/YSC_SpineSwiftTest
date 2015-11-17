@@ -25,6 +25,9 @@ REVISION HISTORY
 - All running action is keyed with its animation name.
 - Added YSC_SpineSkeleton.isRunningAction(key:String) - Use this function to check a certain animation               is being run. (Warning: this function is not working with the animation run by runningAnimationUsingQueue.)
 
+2015/11/17
+- Fixed the bug: Some sprites used in slot animation were not shown in the next animation. It's fixed.
+
 WHAT IT SUPPORTS:
 - Fully functional bone and slot animations (scale, rotate, translate, color, curve, and so on)
 - Support IK (Inverse Kinematics), which is available in Spine Pro version

@@ -255,7 +255,8 @@ class YSC_SpineBone: SKSpriteNode {
     func runAnimation(animationName:String, count:Int) {
         
         self.removeAllActions()     // reset all actions first
-
+        self.setToDefaults()
+        
         let SRTAction = self.SRTAction[animationName]!
         if count <= -1 {
             let actionForever = SKAction.repeatActionForever(SRTAction)
@@ -268,6 +269,7 @@ class YSC_SpineBone: SKSpriteNode {
     
     func runAnimationUsingQueue(animationName:String, count:Int, interval:NSTimeInterval, queuedAnimationName:String) {
         self.removeAllActions()     // reset all actions first
+        self.setToDefaults()
         
         let SRTAction = self.SRTAction[animationName]!
         let repeatingAction = SKAction.repeatAction(SRTAction, count: count)
